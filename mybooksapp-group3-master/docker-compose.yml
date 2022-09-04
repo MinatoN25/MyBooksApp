@@ -1,0 +1,46 @@
+version: '3'
+services:
+ mysql:
+  image: mysql:latest
+  ports:
+    - "3306:3306"
+  container_name: mysql
+  network_mode: host
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: booksdb
+    MYSQL_USER: app_root
+    MYSQL_PASSWORD: root123
+ favouriteservice:
+  image: favouriteservice
+  build: favouriteservice
+  restart: always
+  ports:
+   - "8080:8080"
+  expose:
+   - 8080
+  container_name: favouriteservice
+  network_mode: host
+  depends_on: 
+   - mysql
+ userservice:
+  image: userservice
+  build: userservice
+  restart: always
+  ports:
+   - "8081:8081"
+  expose:
+   - 8081 
+  container_name: userservice
+  network_mode: host
+  depends_on: 
+   - mysql
+ mybooksui:
+  image: mybooksui
+  build: MyBooksUI
+  ports: 
+   - "4200:4200"
+  container_name: mybooksui
+  network_mode: host
+
+

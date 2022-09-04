@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [RegisterPage]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="RegisterUser(failed)">
+    <classes>
+      <class name="com.selenium.mybooksapp.POM.RegisterPage">
+        <methods>
+          <include name="destroy"/>
+          <include name="registerUser"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- com.selenium.mybooksapp.POM.RegisterPage -->
+    </classes>
+  </test> <!-- RegisterUser(failed) -->
+</suite> <!-- Failed suite [RegisterPage] -->
