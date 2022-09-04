@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/booksdb?createDatabaseIfNotExist=true&&verifyServerCertificate=false&useSSL=false&requireSSL=false
+    username: root
+    password: Password@123
+  jpa:
+    hibernate: 
+      ddl-auto: update      
+      show-sql: true
+    
+server:
+ port: 8082
