@@ -1,0 +1,45 @@
+
+<div class="register-block" >
+    <div class="row register-header">
+<h3 >Register User</h3>
+  </div>
+  <form class="register-form"  >
+  <div class="row">
+  <mat-form-field class="register-input-field">
+    <input id="firstName"  name="firstName" [(ngModel)]="newUser.firstName" matInput placeholder="First Name">
+  </mat-form-field>
+  </div>
+  <div class="row">
+  <mat-form-field class="register-input-field">
+    <input id="lastName" name="lastName" [(ngModel)]="newUser.lastName" matInput placeholder="Last Name">
+  </mat-form-field>
+  </div>
+  <div class="row">
+  <mat-form-field class="register-input-field">
+    <input id="userId" name="userId" [(ngModel)]="newUser.userId" matInput placeholder="User Id">
+  </mat-form-field>
+</div>
+<div class="row">
+  <mat-form-field class="register-input-field">
+    <input id="password" name="password" type="password" [(ngModel)]="newUser.password" matInput placeholder="Password">
+  </mat-form-field>
+</div>
+<div class="container row">
+    <div class="col-md-6">
+        <input type="file" (change)="onFileChanged($event)">    </div>
+    <div class="col-md-6">
+        <input type="button" (click)="onUpload()" value="upload">
+    </div>
+</div>
+<hr />
+<div class="container row">
+    <div class="col-md-12">
+        <div *ngIf=message>{{message}}</div>
+    </div>
+</div>
+<div class="row register-button">
+<button  mat-raised-button color="primary" class="register-btn" style="text-align:center" type="submit" (click)="registerUser()" >Register User</button>
+<button mat-raised-button color="primary" class="register-reset" (click)="resetInput()">Clear</button>
+</div>
+</form>
+</div>

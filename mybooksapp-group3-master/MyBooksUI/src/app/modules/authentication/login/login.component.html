@@ -1,0 +1,27 @@
+
+
+  <div class="login-block">
+    <div class="row login-header">
+  <h3>Login User</h3>
+    </div>  
+    <form class="login-form"  > 
+    <div class="row">
+    <mat-form-field class="login-input-field">
+      <input id="userId" name="userId" class="login-userId" [(ngModel)]="user.userId" matInput placeholder="User Id">
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field class="login-input-field">
+      <input id="password" name="password" class="login-password" type="password" [(ngModel)]="user.password" matInput placeholder="Password">
+    </mat-form-field>
+  </div>
+  
+  <div class="row login-button">
+  <button  mat-raised-button color="primary" class="login-btn" type="button" (click)="loginUser()" >Login</button>
+  <button  mat-raised-button color="primary" class="login-register" type="button" (click)="registerUser()" >Register </button>
+  
+  </div>
+</form>
+  </div>
+  
+  

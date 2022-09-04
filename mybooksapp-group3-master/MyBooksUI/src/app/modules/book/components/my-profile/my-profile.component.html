@@ -1,0 +1,31 @@
+<div class="my-profile-block" >
+  <div class="row my-profile-header">
+<h3  style="color: rebeccapurple; font-size: 40px;" >My Profile</h3>
+</div>
+<form class="my-profile-form"  >
+<div class="row">
+<mat-form-field class="my-profile-input-field">
+  <input id="firstName"  name="firstName" [(ngModel)]="user.firstName" matInput placeholder="First Name">
+</mat-form-field>
+</div>
+<div class="row">
+<mat-form-field class="my-profile-input-field">
+  <input id="lastName" name="lastName" [(ngModel)]="user.lastName" matInput placeholder="Last Name">
+</mat-form-field>
+</div>
+<div class="row">
+<mat-form-field class="my-profile-input-field">
+  <input id="userId" name="userId" [(ngModel)]="user.userId" matInput placeholder="User Id">
+</mat-form-field>(userId can not be changed)
+</div>
+<div class="row">
+<mat-form-field class="my-profile-input-field">
+  <input id="password" name="password" type="password" [(ngModel)]="user.password" matInput placeholder="Password">
+</mat-form-field>
+</div>
+<div class="row my-profile-button">
+<button  mat-raised-button color="primary" class="my-profile-btn" style="text-align:center" type="submit" (click)="updateProfile()" >Update Profile</button>
+<button mat-raised-button color="primary" class="my-profile-reset" (click)="resetInput()">Clear</button>
+</div>
+</form>
+</div>

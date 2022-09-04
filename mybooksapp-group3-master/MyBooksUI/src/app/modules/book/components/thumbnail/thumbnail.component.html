@@ -1,0 +1,15 @@
+<mat-card class="book-thumbnail">
+<mat-card-header>
+    <mat-card-title>{{book?.title}}</mat-card-title>
+    <mat-card-subtitle>Author : {{book?.author_name}}</mat-card-subtitle>
+</mat-card-header>
+ <img  class="book-image" mat-card-image [src] = "book?.cover_i" [alt] ="book?.title" > 
+ <mat-card-content>
+    <span *ngIf="book?.edition_count!==undefined"> {{book?.edition_count}} editions </span>
+    <span *ngIf="book?.first_publish_year!==undefined"> - first published in {{book?.first_publish_year}}</span>
+ </mat-card-content>
+<mat-card-actions class= "book-action">
+<button *ngIf="!isFavourites"  mat-button color="primary" class="addBookButton" (click)="addBookToFavourites()" >Add to Favourites</button>
+<button *ngIf="isFavourites"  mat-button color="primary"  class="deleteBookButton" (click)="deleteBookFromFavourites()" align="left">Delete from Favourites</button>
+</mat-card-actions>
+</mat-card>

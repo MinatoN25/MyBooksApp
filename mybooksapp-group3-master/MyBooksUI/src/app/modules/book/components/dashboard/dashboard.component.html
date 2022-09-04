@@ -1,0 +1,18 @@
+<div class='flex-container'>
+  <form class='example-form'>
+    <mat-form-field class="search-select">    
+        <mat-select [(ngModel)]="selectedValue" name="search">
+          <mat-option *ngFor="let searchValue of searchValues" [value]="searchValue.value">
+            {{searchValue.viewValue}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="search-input">
+      <input  matInput class="searchinput" type="text" #box (keyup.enter)="onEnter(box.value)">
+      <mat-placeholder>Search Books</mat-placeholder>
+    </mat-form-field>
+  </form>
+
+  <book-container [books]="books" [isFavourites]='isFavourites' ></book-container>
+
+</div>

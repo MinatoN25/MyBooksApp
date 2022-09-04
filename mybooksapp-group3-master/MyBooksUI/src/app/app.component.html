@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+  <span>My Favourite Books</span>
+  <button mat-button class="dashboardbtn" [routerLink]="['/books/home']">Dashboard</button>
+  <button mat-button class="favouritebtn" [routerLink]="['/books/favourite']">My Favourites</button> 
+  <button mat-button class="profilebtn" [routerLink]="['/books/my-profile']">My profile</button> 
+  <button mat-button class="logoutbtn" (click)="logout()">Logout</button>
+  <img src= "https://cdn.discordapp.com/attachments/767704868310745128/804996767631540224/1611996562916.png" alt="userImage" width="45" height="45">
+</mat-toolbar>
+<router-outlet></router-outlet>
